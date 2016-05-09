@@ -15,6 +15,7 @@ class JsCode extends Extractor implements ExtractorInterface
         'n__' => 'n__',
         'p__' => 'p__',
         'w__' => 'w__',
+        'wn__' => 'wn__',
     );
 
     /**

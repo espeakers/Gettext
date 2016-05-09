@@ -45,7 +45,31 @@ abstract class FunctionsScanner
                     }
                     break;
 
+                case 'w__':
+                    if (!isset($args[0])) {
+                        continue 2;
+                    }
+
+                    $original = $args[0];
+
+                    if ($original !== '') {
+                        $translation = $translations->insert('', $original);
+                    }
+                    break;
+
                 case 'n__':
+                    if (!isset($args[1])) {
+                        continue 2;
+                    }
+
+                    list($original, $plural) = $args;
+
+                    if ($original !== '') {
+                        $translation = $translations->insert('', $original, $plural);
+                    }
+                    break;
+
+                case 'wn__':
                     if (!isset($args[1])) {
                         continue 2;
                     }
