@@ -214,3 +214,29 @@ function dnp__e()
 {
     echo call_user_func_array('dnp__', func_get_args());
 }
+
+/**
+ * custom whitelabel translation function
+ *
+ * @see p__
+ */
+function w__()
+{
+    $args = func_get_args();
+    array_unshift($args, 'overwritable');
+    $value = call_user_func_array('p__', $args);
+    return $value;
+}
+
+/**
+ * custom whitelabel translation function
+ *
+ * @see np__
+ */
+function wn__()
+{
+    $args = func_get_args();
+    array_unshift($args, 'overwritable');
+    $value = call_user_func_array('np__', $args);
+    return $value;
+}
