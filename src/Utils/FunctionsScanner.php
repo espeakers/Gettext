@@ -53,7 +53,7 @@ abstract class FunctionsScanner
                     $original = $args[0];
 
                     if ($original !== '') {
-                        $translation = $translations->insert('', $original);
+                        $translation = $translations->insert('overwritable', $original);
                     }
                     break;
 
@@ -77,7 +77,7 @@ abstract class FunctionsScanner
                     list($original, $plural) = $args;
 
                     if ($original !== '') {
-                        $translation = $translations->insert('', $original, $plural);
+                        $translation = $translations->insert('overwritable', $original, $plural);
                     }
                     break;
 
