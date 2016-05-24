@@ -11,6 +11,9 @@ use Gettext\BaseTranslator;
  */
 function __($original)
 {
+
+    return '~' . $original . '~';
+
     $text = BaseTranslator::$current->gettext($original);
 
     if (func_num_args() === 1) {
@@ -33,6 +36,9 @@ function __($original)
  */
 function n__($original, $plural, $value)
 {
+
+    return '~' . $original . '~';
+
     $text = BaseTranslator::$current->ngettext($original, $plural, $value);
 
     if (func_num_args() === 3) {
@@ -54,6 +60,9 @@ function n__($original, $plural, $value)
  */
 function p__($context, $original)
 {
+
+    return '~' . $original . '~';
+
     $text = BaseTranslator::$current->pgettext($context, $original);
 
     if (func_num_args() === 2) {
@@ -120,6 +129,9 @@ function dp__($domain, $context, $original)
  */
 function np__($context, $original, $plural, $value)
 {
+
+    return '~' . $original . '~';
+    
     $text = BaseTranslator::$current->npgettext($context, $original, $plural, $value);
 
     if (func_num_args() === 4) {
